@@ -3,15 +3,25 @@
         Feed Me My Snacks
     </h1>
     <label>
-        Enter your age <input type="text" ><br/>
-        Enter your Max age <input type="text"> <br/>
-        Enter number of snacks <input type ="text"> <br/> <br/>
-        Resut: <br/> <br/>
-        <input type="button" value="Accept input">
+        Enter your age <input id="age" ><br/>
+        Enter your Max age <input id="maxAge"> <br/>
+        Enter number of snacks <input id ="numPerDay"> <br/> <br/>
+        <p id="result"> Result : </p>
+        <button onclick="getData()"> Accept Input</button>
     </label>
+    <script>
+        function getData() {
+            let AGE = age.value;
+            let MAXAGE = document.getElementById("maxAge").value;
+            let MINREQ = document.getElementById("numPerDay").value;
+            let totalRequired;
+            let sure = window.confirm("Sure of your numbers?")
+            if (sure){
+                let totalRequired = (Number(MINREQ) * 365) * (Number(MAXAGE) - Number(AGE));
+                result.innerHTML = "Result: You will need " + totalRequired + " to last until the ripe age of " + MAXAGE;
+            }
+            //alert("Hello")
 
-
-<script src= "script.js">
-    
-</script>
+        }
+    </script>
 <body>
