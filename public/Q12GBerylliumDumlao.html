@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 2nd Graded Exercise submitted by Hans Dumlao of 9Beryllium</h2>
+    <label>
+        Meal Price: <input id="price" ><br/>
+        Tip: <input id="tip"> <br/>
+        Service Charge: <input id ="charge"> <br/> <br/>
+        <button onclick="totalMeal()"> Accept Input</button> <br/>
+        <p id="totalmeal"> Total Meal: </p>
+    </label>
+    
+
+    <script>
+        function totalMeal() {
+            let mp = price.value;
+            let tp = document.getElementById("tip").value;
+            let sc = document.getElementById("charge").value;
+            let totalCost;
+            let sure = window.confirm("Sure of your values?")
+            if (sure){
+                let totalCost = (Number(mp)) + (Number(tp)) + (Number(sc)/100 * Number(mp))
+                let n = totalCost.toFixed(2);
+                totalmeal.innerHTML = "Total Meal: " + n;
+            }
+         
+        }
+    </script>
+
+</body>
+</html>
