@@ -18,15 +18,15 @@
         function checkIt() {
               let guessit = guess.value;
               if ((Number(guessit) > 100)) {
-                alert("Please enter a number withing 0 - 100")
+                result.innerHTML = "Result: Please enter a number withing 0 - 100";
               } else if ((Number(guessit) < 0)) {
-                alert("Please enter a number within 0-100")
+                result.innerHTML = "Result: Please enter a number withing 0 - 100";
               } else if ((Number(guessit) == dNumber)) {
-                alert("You are correct!");
+                result.innerHTML = "Result: You are correct!";
               } else if ((Number(guessit) > dNumber )) {
-                alert("Go Lower");
+                result.innerHTML = "Result: Lower";
               } else if ((Number(guessit) < dNumber)) {
-                alert("Go Heigher");
+                result.innerHTML = "Result: Higher";
               }
          
         }
