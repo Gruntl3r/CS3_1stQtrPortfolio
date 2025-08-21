@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+   <h2> Q1 3rd Graded Exercise submitted by Hans Dumlao of Beryllium</h2>
+   <label>
+    Guess the number: **** <br/> <br/>
+    The number is from 1 to 100 <br/> <br/>
+    Enter your guess: <input id ="guess"> <br/> <br/>
+    <button onclick="checkIt()"> Check it</button> <br/>
+        <p id="result"> Result: </p>
+   </label>
+
+    <script>
+
+       var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
+
+        function checkIt() {
+              let guessit = guess.value;
+              if ((Number(guessit) > 100)) {
+                alert("Please enter a number withing 0 - 100")
+              } else if ((Number(guessit) < 0)) {
+                alert("Please enter a number within 0-100")
+              } else if ((Number(guessit) == dNumber)) {
+                alert("You are correct!");
+              } else if ((Number(guessit) > dNumber )) {
+                alert("Go Lower");
+              } else if ((Number(guessit) < dNumber)) {
+                alert("Go Heigher");
+              }
+         
+        }
+    </script>
+
+</body>
+
+</html>
